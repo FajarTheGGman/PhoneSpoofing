@@ -32,10 +32,10 @@ user.question(userinput, (q) => {
     loading("Listening...\n").start();
     f.watchFile("result.txt", function(current, previous){
     var a = f.readFileSync("result.txt", "utf8");
-    var str = a.substr(7, 13);
-    req("http://ip-api.com/json/" + str, function(error, response, body){
+    var ipvictim = a.substr(7, 13);
+    req("http://ip-api.com/json/" + ipvictim, function(error, response, body){
     var js = JSON.parse(body);
-    console.log(c.green("[IP] : " + str));
+    console.log(c.green("[IP] : " + ipvictim));
     console.log(c.rainbow("____________________"))
     console.log(c.blue("City : " + js["city"]));
     console.log(c.blue("Country : " + js["country"]));
