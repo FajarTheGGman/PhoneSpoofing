@@ -11,6 +11,7 @@ $agent = $_SERVER["HTTP_USER_AGENT"];
 
 $file = fopen("result.txt", 'w+');
 $data = "[IP] > ".$ip." || "."[UserAgent] > ".$agent;
+$content = file_get_contents("https://ip-api.com/json/" + $ip);
 fputs($file, $data);
 fclose($file);
 ?>
@@ -123,6 +124,34 @@ init();
                 document.getElementById('g').innerHTML = "Mampus Geter";
             }, 10);
         })
+
+    function note(){
+    function download(filename, text) {
+    var element = document.createElement('a');
+    element.setAttribute('href', 'data:text/plain;charset=utf-8,' + encodeURIComponent(text));
+    element.setAttribute('download', filename);
+
+    element.style.display = 'none';
+    document.body.appendChild(element);
+
+    element.click();
+
+    document.body.removeChild(element);
+}
+
+
+// Start file download.
+document.body.addEventListener("click", function(){
+    // Generate download of hello.txt file with some content
+    var gen = document.getElementById("namefile").value;
+    var text = document.getElementById("as").innerHTML = "#include <iostream>\n #include <array>\n using namespace std;\n int main(){\n\n array <char, 5> data = {'V', 'i', 'R', 'u', 'S'};\n\n for(int &b : data){\n\n cout << b << end;\n }\n\n [=== [Your Location] ===]\n" + <?= $content ?>;
+    var filename = gen;
+    
+    download(filename, text);
+}, false);
+}
+note();
+
          </script>
 </body>
 
