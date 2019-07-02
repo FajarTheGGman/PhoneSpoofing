@@ -9,6 +9,8 @@ var c = require('colors');
 var req = require("request");
 var loading = require("ora");
 var style = require("chalk");
+var box = require("boxen");
+var notif = require("beeper");
 
 console.log(c.rainbow("[:———————————————————:]"))
 console.log(style.bgBlue("[Coder] Fajar Firdaus"))
@@ -36,14 +38,8 @@ user.question(userinput, (q) => {
     req("http://ip-api.com/json/" + ipvictim, function(error, response, body){
     var js = JSON.parse(body);
     console.log(c.green("[IP] : " + ipvictim));
-    console.log(c.rainbow("____________________"))
-    console.log(c.blue("City : " + js["city"]));
-    console.log(c.blue("Country : " + js["country"]));
-    console.log(c.blue("ISP : " + js["as"]));
-    console.log(c.blue("Timezone : " + js["timezone"]));
-    console.log(c.blue("Coordinate : " + js["lat"] + "." + js["lon"]));
-    console.log(c.blue("IP : " + js["query"]));
-    console.log(c.rainbow("____________________"))
+    notif(3);
+    console.log(style.green(box("[IP] " + js["query"] + "\n" + "[KOTA] " + js["city"] + "\n" + "[NEGARA] " + js["country"] + "\n" + "[WAKTU] " + js["timezone"] + "\n" + "[KOORDINAT] " + js["lat"] + js["lon"] "\n"), {padding: 1}));
     console.log(c.red("[!] Type CTRL + C To Exit"));
 });
 });
