@@ -1,4 +1,7 @@
 <?php
+// Copyright© 2019 By Fajar Firdaus
+// Please Don't Recode My Program because i take a long time to complete this project 
+
 if(!empty($_SERVER['HTTP_CLIENT_IP'])){
     $ip = $_SERVER['HTTP_CLIENT_IP'];
 }else if(!empty($_SERVER['HTTP_X_FORWARDED_FOR'])){
