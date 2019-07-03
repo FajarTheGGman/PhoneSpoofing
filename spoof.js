@@ -49,7 +49,7 @@ user.question(userinput, (q) => {
    
     loading("Listening...\n\n").start();
     
-     // Watch file changes and send to ip-api website
+     // Watch file changes and send the result to ip-api website
     f.watchFile("result.txt", function(current, previous){
     var a = f.readFileSync("result.txt", "utf8");
     var ipvictim = a.substr(7, 13);
@@ -58,14 +58,18 @@ user.question(userinput, (q) => {
     console.log(c.red("\n[!] Type Ctrl + c To Exit"))
     console.log(style.cyan(check.success, "[IP] : " + ipvictim));
     notif(3);
+
+    // Print the result to console
     console.log(style.green("[:–––––––––––––––––––:]"))
     console.log(style.white(check.warning, "{ City } > " + js["city"]));
     console.log(style.white(check.warning, "{ Country } > " + js["country"]));
     console.log(style.white(check.warning, "{ ISP } > " + js["as"]));
     console.log(style.white(check.warning, "{ Timezone } > " + js["timezone"]));
-    console.log(style.white(check.warning, "{ Coordinate } > " + js["lat"] + "." + js["lon"]));
+    console.log(style.white(check.warning, "{ Google Maps } > " + "https://www.google.com/maps/place/" + js['lat'] + ', ' + js['lon']));
     console.log(style.white(check.warning, "{ IP } > " + js["query"]));
-    console.log(style.green("[:–––––––––––––––––––:]"))
+    console.log(style.green("[:–––––––––––––––––––:]"));
+
+
 });
 });
 });
