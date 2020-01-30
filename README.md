@@ -5,6 +5,11 @@
 
 ![alt-text](https://github.com/FajarTheGGman/PhoneSpoofing/blob/master/%2C/Screenshot_2019-07-02-21-54-30-663_com.android.chrome.png)
 
+# What's New ?
+<pre>
+- Update Server from serveo.net to ngrok.com (because serveo server is down)
+</pre>
+
 # Tutorial install
 <pre>
 1.> apt-get update && apt-get upgrade -y
