@@ -18,3 +18,6 @@
 4.> cd PhoneSpoofing
 5.> sh install.sh
 </pre>
+
+# Support Me :)
+![donate](https://raw.githubusercontent.com/FajarTheGGman/F-Tools/master/.images/donate.jpeg)
