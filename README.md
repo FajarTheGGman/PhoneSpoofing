@@ -11,13 +11,25 @@
 </pre>
 
 # Tutorial install
+
+Termux
 <pre>
 1.> apt-get update && apt-get upgrade -y
 2.> apt-get install git -y
 3.> git clone https://github.com/FajarTheGGman/PhoneSpoofing
 4.> cd PhoneSpoofing
-5.> sh install.sh
+5.> bash install.sh
 </pre>
+
+Linux
+<pre>
+1.> sudo apt-get update && apt-get upgrade -y
+2.> sudo apt-get install git -y
+3.> git clone https://github.com/FajarTheGGman/PhoneSpoofing
+4.> cd PhoneSpoofing
+5.> sudo bash install.sh
+</pre>
+
 
 # Support Me :)
 ![donate](https://raw.githubusercontent.com/FajarTheGGman/F-Tools/master/.images/donate.jpeg)
