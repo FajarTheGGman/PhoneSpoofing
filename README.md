@@ -8,6 +8,7 @@
 # What's New ?
 <pre>
 - Update Server from serveo.net to ngrok.com (because serveo server is down)
+- Fix Bug Link 
 </pre>
 
 # Tutorial install
