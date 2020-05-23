@@ -1,0 +1,33 @@
+
+  "name": "phonespoofing",
+  "version": "1.0.0",
+  "description": "![](https://img.shields.io/badge/Language-Javascript-Yellow) ![](https://img.shields.io/badge/Version-V2-lime)",
+  "main": "spoof.js",
+  "scripts": {
+    "test": "npm start"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/FajarTheGGman/PhoneSpoofing.git"
+  },
+  "keywords": [
+    "spoofing"
+  ],
+  "author": "FajarTheGGman",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/FajarTheGGman/PhoneSpoofing/issues"
+  },
+  "dependencies": {
+	 "shelljs" : "*",
+         "colors" : "*",
+         "chalk" : "*",
+         "cowsay" : "*",
+         "readline" : "*",
+         "request" : "*",
+         "ora" : "*",
+         "beeper" : "*",
+         "log-symbols" : "*"
+  },
+  "homepage": "https://github.com/FajarTheGGman/PhoneSpoofing#readme"
+}
