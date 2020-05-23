@@ -14,6 +14,6 @@ unzip ngrok-stable-linux-arm.zip
 fi
 
 apt-get install nodejs -y
-npm install shelljs colors chalk cowsay readline request ora beeper log-symbols$
+npm install
 node spoof
 
