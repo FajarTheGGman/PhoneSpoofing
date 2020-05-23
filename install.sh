@@ -5,7 +5,7 @@ sleep 1
 x=$(dpkg --print-architecture)
 if [[ $x == "amd64" ]]; then
 wget https://bin.equinox.io/c/4VmDzA7iaHb/ngrok-stable-linux-amd64.zip
-tar -xzvf ngrok-stable-linux-arm64.tgz
+unzip ngrok-stable-linux-amd64.zip
 fi
 
 if [[ $x == "arm" ]]; then
