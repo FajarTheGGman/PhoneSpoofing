@@ -5,7 +5,7 @@
   "main": "spoof.js",
   "scripts": {
     "test": "npm start",
-    "start" : "node spoof.js"
+    "start": "node spoof.js"
   },
   "repository": {
     "type": "git",
@@ -20,16 +20,16 @@
     "url": "https://github.com/FajarTheGGman/PhoneSpoofing/issues"
   },
   "dependencies": {
-	 "shelljs" : "*",
-         "colors" : "*",
-         "chalk" : "*",
-         "cowsay" : "*",
-         "readline" : "*",
-         "request" : "*",
-         "ora" : "*",
-         "beeper" : "*",
-         "log-symbols" : "*",
-	 "sleep" : "*"
+    "shelljs": "*",
+    "colors": "*",
+    "chalk": "*",
+    "cowsay": "*",
+    "readline": "*",
+    "request": "*",
+    "ora": "*",
+    "beeper": "*",
+    "log-symbols": "*",
+    "sleep": "*"
   },
   "homepage": "https://github.com/FajarTheGGman/PhoneSpoofing#readme"
 }
