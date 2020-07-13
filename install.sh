@@ -16,18 +16,23 @@ install_ngrok(){
   if [[ $amd == "amd64" ]]; then
     wget https://bin.equinox.io/c/4VmDzA7iaHb/ngrok-stable-linux-amd64.zip
     unzip ngrok-stable-linux-amd64.zip
-  fi
-
-  if [[ $arm == "arm" ]]; then
+  elif [[ $arm == "arm" ]]; then
     wget https://bin.equinox.io/c/4VmDzA7iaHb/ngrok-stable-linux-arm.zip
     unzip ngrok-stable-linux-arm.zip
-  fi
-
-  if [[ $aarch == "aarch64" ]]; then
+  elif [[ $aarch == "aarch64" ]]; then
+    wget https://bin.equinox.io/c/4VmDzA7iaHb/ngrok-stable-linux-arm.zip
+    unzip ngrok-stable-linux-arm.zip
+  else
     wget https://bin.equinox.io/c/4VmDzA7iaHb/ngrok-stable-linux-arm.zip
     unzip ngrok-stable-linux-arm.zip
   fi
 }
+
+if [[ $wget == *"wget"* ]]; then
+    echo "[+] Wget already installed"
+else
+  apt-get install wget -y
+fi
 
 if [[ $cek == *"ngrok"* ]]; then
   echo "[+] Ngrok already downloaded"
@@ -47,10 +52,5 @@ else
     npm install
 fi
 
-if [[ $wget == *"wget"* ]]; then
-    echo "[+] Wget already installed"
-else
-  apt-get install wget -y
-fi
 
 node spoof
