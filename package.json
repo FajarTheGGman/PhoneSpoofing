@@ -20,7 +20,7 @@
     "url": "https://github.com/FajarTheGGman/PhoneSpoofing/issues"
   },
   "dependencies": {
-    "shelljs": "*",
+    "shelljs": "0.8.4",
     "colors": "*",
     "chalk": "*",
     "cowsay": "*",
