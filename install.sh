@@ -6,6 +6,7 @@ sleep 1
 cek=$(ls | grep "ngrok")
 node=$(apt list --installed | grep "nodejs")
 module=$(ls | grep "node_modules")
+wget=$(apt list --installed | grep "wget")
 
 install_ngrok(){
   amd=$(dpkg --print-architecture | grep "amd64")
@@ -29,7 +30,7 @@ install_ngrok(){
 }
 
 if [[ $cek == *"ngrok"* ]]; then
-  echo "[+] Ngrok already downloaded";
+  echo "[+] Ngrok already downloaded"
 else
   install_ngrok
 fi
@@ -44,6 +45,12 @@ if [[ $module == *"node_modules"* ]]; then
     echo "[+] node_modules already setup"
 else
     npm install
+fi
+
+if [[ $wget == *"wget"* ]]; then
+    echo "[+] Wget already installed"
+else
+  apt-get install wget -y
 fi
 
 node spoof
