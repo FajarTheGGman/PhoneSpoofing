@@ -28,8 +28,7 @@
     "request": "*",
     "ora": "*",
     "beeper": "*",
-    "log-symbols": "*",
-    "sleep": "*"
+    "log-symbols": "*"
   },
   "homepage": "https://github.com/FajarTheGGman/PhoneSpoofing#readme"
 }
