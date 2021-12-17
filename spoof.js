@@ -1,5 +1,4 @@
 // Copyright© 2019 By Fajar Firdaus
-// Please don't recode my program because i take a long time to finish this project
 
 // Some depencies
 var cmd = require('shelljs');
