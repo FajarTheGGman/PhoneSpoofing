@@ -28,7 +28,7 @@
     "ora": "*",
     "readline": "*",
     "request": "*",
-    "shelljs": "0.8.4",
+    "shelljs": "0.8.5",
     "sleep": "*"
   },
   "homepage": "https://github.com/FajarTheGGman/PhoneSpoofing#readme"
